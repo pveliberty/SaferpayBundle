@@ -8,12 +8,14 @@
         <parameter key="payment.saferpay.saferpay.class">Payment\Saferpay\Saferpay</parameter>
         <parameter key="payment.saferpay.httpclient.factory.class">Payment\Bundle\SaferpayBundle\Http\HttpClientFactory</parameter>
         <parameter key="payment.saferpay.payinitparameter.factory.class">Payment\Bundle\SaferpayBundle\PayInitParameter\PayInitParameterFactory</parameter>
+
         <parameter key="payment.saferpay.authorizationinitparameter.factory.class">Payment\Bundle\SaferpayBundle\AuthorizationInitParameter\AuthorizationInitParameterFactory</parameter>
         <parameter key="payment.saferpay.recordlinkinitparameter.factory.class">Payment\Bundle\SaferpayBundle\RecordLinkInitParameter\RecordLinkInitParameterFactory</parameter>
         <parameter key="payment.saferpay.httpclient.buzz.class">Payment\HttpClient\BuzzClient</parameter>
         <parameter key="payment.saferpay.payinitparameter.default.class">Payment\Saferpay\Data\PayInitParameter</parameter>
         <parameter key="payment.saferpay.authorizationinitparameter.default.class">Payment\Saferpay\Data\AuthorizationParameter</parameter>
         <parameter key="payment.saferpay.recordlinkinitparameter.default.class">Payment\Saferpay\Data\RecordLinkInitParameter</parameter>
+
     </parameters>
 
     <services>
@@ -41,5 +43,6 @@
 
         <service id="payment.saferpay.recordlinkinitparameter.factory" class="%payment.saferpay.recordlinkinitparameter.factory.class%" />
         <service id="payment.saferpay.recordlinkinitparameter.default" class="%payment.saferpay.recordlinkinitparameter.default.class%" />
+
     </services>
 </container>

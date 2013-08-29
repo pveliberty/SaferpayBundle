@@ -16,10 +16,10 @@ class PaymentSaferpayExtension extends Extension
      */
     public function load(array $configs, ContainerBuilder $container)
     {
-//ds($configs);
+
         $configuration = new Configuration();
         $processor = new Processor();
- 
+
         $config = $processor->process($configuration->getConfigTreeBuilder()->buildTree(), $configs);
 
         $container->setParameter('payment.saferpay.logger.serviceid', $config['logger']['serviceid']);
@@ -27,6 +27,7 @@ class PaymentSaferpayExtension extends Extension
 
         $container->setParameter('payment.saferpay.payinitparameter.serviceid', $config['payinitparameter']['serviceid']);
         $container->setParameter('payment.saferpay.payinitparameter.defaults', $config['payinitparameter']['data']);
+
 
         $container->setParameter('payment.saferpay.authorizationinitparameter.serviceid', $config['authorizationinitparameter']['serviceid']);
         $container->setParameter('payment.saferpay.authorizationinitparameter.defaults', $config['authorizationinitparameter']['data']);

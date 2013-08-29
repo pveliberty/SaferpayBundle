@@ -26,7 +26,6 @@ class CompilerPass implements CompilerPassInterface
             !$container->hasDefinition($payInitParameterFactoryServiceId) OR 
             !$container->hasDefinition($authorizationInitParameterFactoryServiceId) OR
             !$container->hasDefinition($recordLinkInitParameterFactoryServiceId) 
-
         ){
             return;
         }
@@ -44,6 +43,7 @@ class CompilerPass implements CompilerPassInterface
             $container->getParameter('payment.saferpay.payinitparameter.defaults')
         );
 
+
         $authorizationInitParameterFactoryDefinition = $container->getDefinition($authorizationInitParameterFactoryServiceId);
         $authorizationInitParameterFactoryDefinition->addArgument(
             new Reference($container->getParameter('payment.saferpay.authorizationinitparameter.serviceid'))
@@ -59,6 +59,7 @@ class CompilerPass implements CompilerPassInterface
         $recordLinkInitParameterFactoryDefinition->addArgument(
             $container->getParameter('payment.saferpay.recordlinkinitparameter.defaults')
         );
+
 
         $loggerServiceId = $container->getParameter('payment.saferpay.logger.serviceid');
         if($container->hasAlias($loggerServiceId)){

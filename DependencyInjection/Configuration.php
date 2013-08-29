@@ -80,6 +80,7 @@ class Configuration implements ConfigurationInterface
         }
     }
 
+
     /**
      * @param NodeDefinition $node
     */
