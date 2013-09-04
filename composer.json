@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": ">=5.3.3",
-        "payment/saferpay": "master",
+        //"payment/saferpay": "master",
         "symfony/config": ">=2.1.0,<3.0",
         "symfony/dependency-injection": ">=2.1.0,<3.0",
         "symfony/http-kernel": ">=2.1.0,<3.0"
@@ -24,20 +24,23 @@
     "require-dev": {
         "phpunit/phpunit": "3.7.*"
     },
-    "repositories": {
-          "type": "package",
-          "package": {
-          "version": "master",
-          "name": "payment/saferpay",
-          "source": {
-            "url": "https://github.com/pvesin/saferpay.git",
-                   "type": "git",
-                   "reference": "master"
-           }
-         }
-    },
     "autoload": {
         "psr-0": { "Payment\\Bundle\\SaferpayBundle\\": "" }
     },
     "target-dir": "Payment/Bundle/SaferpayBundle"
+    // ,"repositories": [
+    //         {
+    //           "type": "package",
+    //           "package": {
+    //           "version": "master",
+    //           "name": "payment/saferpay",
+    //           "source": {
+    //             "url": "https://github.com/pvesin/saferpay.git",
+    //                    "type": "git",
+    //                    "reference": "master"
+    //            }
+    //          }
+    //         }
+    //    ]
+
 }
