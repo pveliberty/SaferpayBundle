@@ -12,13 +12,12 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 
 abstract class SaferpayController
 {
-<<<<<<< HEAD
-=======
+ 
     /**
      * @param bool $doCompletePayment
      * @return PaymentFinishedResponse|RedirectResponse
      */
->>>>>>> 89c46f347cc8244d449347736c73a69813139337
+ 
     protected function pay($doCompletePayment = true) // if complete payment should be done, not only amount reservation
     {
         /* @var Saferpay $saferpay */
